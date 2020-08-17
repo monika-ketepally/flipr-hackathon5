@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class = "container">
+  <select  [(ngModel)] = "choose" (click) = "choosee()">
+    <option value="NSE">NSE</option>
+    <option value="BSE">BSE</option>
+  </select>
+  <p><br></p>
+  <h2 style = "float : left;    margin-left: 33px;"><b>NIFTY 50</b></h2>
+  <p><br><br><br></p>
+  <hr width="400" style="border: 3px dashed #becdd1; margin-left: 26px; width: 1000px;margin-top:-5px " color="#becdd1" size="4">
+  <div class = "row" style = "margin-left: 23px; margin-top: -25px;">
+    <div class = "col">
+      <h1 style = "font-weight: 1000;">{{todayStock.open| number : '2.2-2'}}</h1>
+      <h4 style="margin-left:7px; color:crimson ;"><span class="glyphicon glyphicon-triangle-bottom"></span>&nbsp;&nbsp;23.50(0.21%)</h4>
+      <h5 style="margin-left:7px; color:rgb(182, 169, 171) ;">As on 13 Aug 2020 IST</h5>
+    </div>
+    <div class = "col" style = "float: right;margin-right: 210px;margin-top: -98px;">
+      <p style="margin-left:7px;color:rgb(182, 169, 171) ;">Day Range</p>
+      <p>{{todayStock.low| number : '2.2-2'}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{todayStock.high| number : '2.2-2'}}</p>
+      <h6 style="color:rgb(182, 169, 171) ;margin-bottom:18px">L</h6>
+      <h4 style="color : #006bb3 ;margin-top: -34px;margin-left: 43px;margin-bottom: 5px;">	&#9679;</h4>
+      <hr size="10" style = "width: 170px;color: black; margin-left: 10px; margin-top: -12px;border: 1px solid" >
+      <h6 style="color:rgb(182, 169, 171) ;margin-top: -32px;margin-left: 185px;">H</h6>
+      <p style="margin-left:7px; color:rgb(182, 169, 171) ;">52 week Range</p>
+      <p>11,315.25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 11,361.41</p>
+      <h6 style="color:rgb(182, 169, 171) ;margin-bottom:18px">L</h6>
+      <h4 style="color : #006bb3 ;margin-top: -34px;margin-left: 43px;margin-bottom: 5px;">	&#9679;</h4>
+      <hr size="10" style = "width: 170px;color: black; margin-left: 10px; margin-top: -12px;border: 1px solid" >
+      <h6 style="color:rgb(182, 169, 171) ;margin-top: -32px;margin-left: 185px;">H</h6>
+    </div>
+  </div>
+  <div style = "margin-left: -6px;">
+  <hr width="1000" style="border: 1px dotted #C0C0C0;margin-right: 105px;" color="#FFFFFF" size="1">
+  <p><br></p>
+  <p style = "margin-left: 194px;">OVERVIEW</p>
+  <div class="divider div-transparent div-arrow-down"></div>
+  <div class = "col-sm-5" style = "margin-top : 20px;margin-left: 112px;">
+    <br>
+    <p style="color:rgb(182, 169, 171) ;">Open</p>
+    <p style = "margin-top: -29px;margin-left: 195px;">{{todayStock.open| number : '2.2-2'}}</p>
+    <hr width="300" style="border: 1px dotted #C0C0C0; margin-left: -10px;" color="#FFFFFF" size="1">
+    <p style="color:rgb(182, 169, 171) ;">Previous close</p>
+    <p style = "margin-top: -29px;margin-left: 195px;">{{todayStock.adjClose| number : '2.2-2'}}</p>
+    <hr width="300" style="border: 1px dotted #C0C0C0 ; margin-left: -10px;" color="#FFFFFF" size="1">
+    <p style="color:rgb(182, 169, 171) ;">Day High</p>
+    <p style = "margin-top: -29px;margin-left: 195px;">{{todayStock.high| number : '2.2-2'}}</p>
+    <hr width="300" style="border: 1px dotted #C0C0C0 ; margin-left: -10px;" color="#FFFFFF" size="1">
+  </div>
+  <br>
+  <div class = "col-sm-5" style = " margin-top : 20px;float: right;">
+    <p style="color:rgb(182, 169, 171) ;">Day Low</p>
+    <p style = "margin-top: -29px;margin-left: 195px;">{{todayStock.low| number : '2.2-2'}}</p>
+    <hr width="300" style="border: 1px dotted #C0C0C0; margin-left: -10px;" color="#FFFFFF" size="1">
+    <p style="color:rgb(182, 169, 171) ;">52 week High</p>
+    <p style = "margin-top: -29px;margin-left: 195px;">12,340.50</p>
+    <hr width="300" style="border: 1px dotted #C0C0C0; margin-left: -10px;" color="#FFFFFF" size="1">
+    <p style="color:rgb(182, 169, 171) ;">52 week Low</p>
+    <p style = "margin-top: -29px;margin-left: 195px;">7,511.10</p>
+    <hr width="300" style="border: 1px dotted #C0C0C0; margin-left: -10px;" color="#FFFFFF" size="1">
+ 
+  </div>
+</div>
+</div>
+<p><br><br></p>
+<div class = "card" style = "border: black;float:right;background-color:rgb(255, 255, 255);height: 141px;border-style: inset;">
+  <p style = "float : left;margin-left:3px;margin-bottom: -20px;">NSE</p><br>
+  <h4 style = "float : left;"><b>NIFTY 50</b></h4><br>
+  <h1><b>{{todayStock.open| number : '2.2-2'}}</b></h1>
+  <p style = "color : rgb(182, 169, 171);margin-top: -49px; margin-left: 215px;">Prev close</p>
+  <p style = "margin-left: 215px;margin-top: -11px;">{{todayStock.close| number : '2.2-2'}}</p>
+  <hr style="border: 10px solid black; float : left;width: 266px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px">
+</div>
+<div class = "container" style = "height : 650px;background-color:#004d99 ;">
+  <select style="margin-left: 30px; margin-top: 30px;border: none;padding: 10px 12px;">
+      <option>Reliance Industries Ltd.</option>
+      <option>Tata Steel Industries Ltd.</option>
+      <option>Eichermont Industries Ltd.</option>
+      <option>Ashokley Industries Ltd. </option>
+      <option>Cipla Industries Ltd.</option>
+    </select>
+  <h3 style = "color: white;margin-left:520px;margin-top: -20px;"><b>CHARTS</b></h3>
+  <hr style="border: 3px solid #e68a00 ; width : 150px; margin-left: 494px;margin-top: -4px;">
+  <h5 style = "color: white;">Chart</h5>
+  <hr style="border: 2px solid #e68a00 ; width: 78px; margin-left: -5px; margin-top: 10px;">
+  <hr style="border: 1px solid white; margin-left: 74px; margin-top: -22px;">
+  <div class = "row" style = "margin-left: 56px;">
+      <h6 style="color :rgb(255, 255, 255)">Aug 13 2020&nbsp; &nbsp; &nbsp;&nbsp;Open : {{todayStockn.open| number : '2.2-2'}}&nbsp;&nbsp; &nbsp; &nbsp;High : {{todayStockn.high| number : '2.2-2'}}
+        &nbsp; &nbsp; &nbsp;&nbsp;Low : {{todayStockn.low| number : '2.2-2'}}&nbsp; &nbsp; &nbsp;&nbsp;Close : {{todayStockn.close| number : '2.2-2'}}&nbsp; &nbsp; &nbsp;&nbsp;Volume : {{todayStockn.volume}}&nbsp; &nbsp; &nbsp;
+      </h6>
+  </div>
+<div style = "height:400px;background-color: white;">
+  <ngx-charts-line-chart 
+[scheme]="colorScheme"
+[results]="single"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[showYAxisLabel]="showYAxisLabel"
+(select)="onSelect($event)">
+</ngx-charts-line-chart>
+</div>
+</div>
+</body>
+</html>
